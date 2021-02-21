@@ -1,0 +1,89 @@
+# ION Enterprise Reporting
+# Automated Build Pipeline
+# V1.0
+# L. McConnell (12/23/2020)
+
+# Trigger a build anytime a change is pushed to the master branch
+trigger:
+- master
+
+# Use the latest windows VM (Windows 2019 with VS at time of creation)
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Production'
+
+steps:
+# Build the solutions
+- task: VSBuild@1
+  name: Build_solutions
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+# Copy the dacpac (required for SQL deployment)
+- task: CopyFiles@2
+  name: Copy_dacpacs
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: '**\bin\Output\*.dacpac'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
+
+# Publish the dacpac artifact
+- task: PublishBuildArtifacts@1
+  name: Publish_dacpac_artifacts
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: dacpacs
+
+# Copy the SSAS build artifacts (required for Analysis Services deployment)
+- task: CopyFiles@2
+  name: Copy_AS_databases
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: '**\bin\Deploy\?(*.asdatabase|*.deploymentoptions|*.deploymenttargets|*.configsettings)'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
+    CleanTargetFolder: true
+
+# Publish the AS database artifacts
+- task: PublishBuildArtifacts@1
+  name: Publish_AS_artifacts
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: asdatabases
+
+# Copy the publish profiles
+- task: CopyFiles@2
+  name: Copy_publish_profiles
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: '**\*.publish.xml'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
+    CleanTargetFolder: true
+
+# Publish the publish profile artifacts
+- task: PublishBuildArtifacts@1
+  name: Publish_profiles_artifacts
+  inputs:
+    PathtoPublish: $(Build.ArtifactStagingDirectory)
+    ArtifactName: publishProfile
+
+# Copy the powershell scripts
+- task: CopyFiles@2
+  name: Copy_powershell_scripts
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: '**\*.ps1'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
+    CleanTargetFolder: true
+
+# Publish the powershell artifacts
+- task: PublishBuildArtifacts@1
+  name: Publish_powershell_artifacts
+  inputs:
+    PathtoPublish: $(Build.ArtifactStagingDirectory)
+    ArtifactName: scripts
