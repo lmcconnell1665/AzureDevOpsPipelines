@@ -17,9 +17,24 @@ http://smart-ip.net/myip
 # Set Parameters
 [CmdletBinding()]
 param(
-    [Parameter(ValueFromPipeline = $true)][String] $ResourceName = "AnalysisServicesName",
-    [Parameter(ValueFromPipeline = $true)][String] $ResourceGroup = "ResourceGroupName"
-     )
+    [String]$ResourceName,
+    [String]$ResourceGroup,
+    [string]$userName,
+    [string]$userPassword,
+    $tenantID
+    )
+
+# Authenticate
+# Convert to SecureString and create the credentials
+[securestring]$secStringPassword = ConvertTo-SecureString $userPassword -AsPlainText -Force
+[pscredential]$credObject = New-Object System.Management.Automation.PSCredential ($userName, $secStringPassword)
+
+# Get out module situation figured out
+Install-Module Az.Accounts -Scope CurrentUser -Force
+Import-Module Az.Accounts
+
+# Connect using service principal
+Connect-AzAccount -Credential $credObject -Tenant $tenantID -ServicePrincipal
 
 #Setting additional parameters
 $ExistingFirewallRuleName = "AzureDevOps"
