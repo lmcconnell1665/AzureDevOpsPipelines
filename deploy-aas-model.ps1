@@ -1,6 +1,5 @@
 # Script to deploy the analysis services model from DevOps pipeline
-# L. McConnell (2020 December)
-# Code borrowed from S. Swindell
+# Code from S. Swindell
 
 Param (
     $artifactPath,
