@@ -1,0 +1,654 @@
+{
+    "source": 2,
+    "revision": 16,
+    "description": null,
+    "createdBy": {
+        "displayName": "Luke McConnell",
+        "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/2dcf252c-eddc-66de-8261-8917c3c2c33a",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+            }
+        },
+        "id": "2dcf252c-eddc-66de-8261-8917c3c2c33a",
+        "uniqueName": "luke.mcconnell@lbmc.com",
+        "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh",
+        "descriptor": "aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+    },
+    "createdOn": "2023-03-06T19:22:32.970Z",
+    "modifiedBy": {
+        "displayName": "Kayla Ellis",
+        "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+            }
+        },
+        "id": "ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+        "uniqueName": "Kayla.Ellis@lbmc.com",
+        "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4",
+        "descriptor": "aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+    },
+    "modifiedOn": "2023-04-12T16:07:30.323Z",
+    "isDeleted": false,
+    "lastRelease": {
+        "id": 218,
+        "name": "Release-9",
+        "artifacts": [],
+        "_links": {},
+        "description": "",
+        "releaseDefinition": {
+            "id": 4,
+            "projectReference": null,
+            "_links": {}
+        },
+        "createdOn": "2023-04-12T15:20:16.530Z",
+        "createdBy": {
+            "displayName": "Kayla Ellis",
+            "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+            "_links": {
+                "avatar": {
+                    "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+                }
+            },
+            "id": "ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+            "uniqueName": "Kayla.Ellis@lbmc.com",
+            "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4",
+            "descriptor": "aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+        }
+    },
+    "variables": {},
+    "variableGroups": [],
+    "environments": [
+        {
+            "id": 5,
+            "name": "Test",
+            "rank": 1,
+            "owner": {
+                "displayName": "Luke McConnell",
+                "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/2dcf252c-eddc-66de-8261-8917c3c2c33a",
+                "_links": {
+                    "avatar": {
+                        "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+                    }
+                },
+                "id": "2dcf252c-eddc-66de-8261-8917c3c2c33a",
+                "uniqueName": "luke.mcconnell@lbmc.com",
+                "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh",
+                "descriptor": "aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+            },
+            "variables": {},
+            "variableGroups": [],
+            "preDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 14
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 1
+                }
+            },
+            "deployStep": {
+                "id": 15
+            },
+            "postDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 16
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 2
+                }
+            },
+            "deployPhases": [
+                {
+                    "deploymentInput": {
+                        "parallelExecution": {
+                            "parallelExecutionType": 0
+                        },
+                        "agentSpecification": {
+                            "identifier": "ubuntu-latest"
+                        },
+                        "skipArtifactsDownload": false,
+                        "artifactsDownloadInput": {
+                            "downloadInputs": []
+                        },
+                        "queueId": 27,
+                        "demands": [],
+                        "enableAccessToken": false,
+                        "timeoutInMinutes": 0,
+                        "jobCancelTimeoutInMinutes": 1,
+                        "condition": "succeeded()",
+                        "overrideInputs": {}
+                    },
+                    "rank": 1,
+                    "phaseType": 1,
+                    "name": "Ubuntu job",
+                    "refName": null,
+                    "workflowTasks": [
+                        {
+                            "environment": {},
+                            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                            "version": "2.*",
+                            "name": "Deploy Infrastructure",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "connectedServiceNameARM": "aa7228c2-52a1-410c-ba2e-4ae258de416c",
+                                "scriptType": "bash",
+                                "scriptLocation": "inlineScript",
+                                "scriptPath": "",
+                                "inlineScript": "az deployment group create \\\n--resource-group RG-tst-integrator-core \\\n--template-file ./iac/main.bicep \\\n--parameters ./iac/test.parameters.json",
+                                "scriptArguments": "",
+                                "powerShellErrorActionPreference": "stop",
+                                "addSpnToEnvironment": "false",
+                                "useGlobalConfig": "false",
+                                "cwd": "$(System.DefaultWorkingDirectory)/_Build_Core_IAC/core_iac_build_artifacts",
+                                "failOnStandardError": "false",
+                                "powerShellIgnoreLASTEXITCODE": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "501dd25d-1785-43e4-b4e5-a5c78ccc0573",
+                            "version": "2.*",
+                            "name": "Deploy Azure Function Endpoints",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "azureSubscription": "aa7228c2-52a1-410c-ba2e-4ae258de416c",
+                                "appType": "functionAppLinux",
+                                "appName": "test-ipp-core",
+                                "deployToSlotOrASE": "false",
+                                "resourceGroupName": "",
+                                "slotName": "production",
+                                "package": "$(System.DefaultWorkingDirectory)/_Build_Core_AzFunc/**/*.zip",
+                                "runtimeStack": "PYTHON|3.8",
+                                "appSettings": "",
+                                "deploymentMethod": "auto"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "environmentOptions": {
+                "emailNotificationType": "OnlyOnFailure",
+                "emailRecipients": "release.environment.owner;release.creator",
+                "skipArtifactsDownload": false,
+                "timeoutInMinutes": 0,
+                "enableAccessToken": false,
+                "publishDeploymentStatus": true,
+                "badgeEnabled": false,
+                "autoLinkWorkItems": false,
+                "pullRequestDeploymentEnabled": false
+            },
+            "demands": [],
+            "conditions": [
+                {
+                    "name": "ReleaseStarted",
+                    "conditionType": 1,
+                    "value": ""
+                }
+            ],
+            "executionPolicy": {
+                "concurrencyCount": 1,
+                "queueDepthCount": 1
+            },
+            "schedules": [],
+            "currentRelease": {
+                "id": 218,
+                "url": "https://vsrm.dev.azure.com/lbmcetg/2bd01083-10bf-4b79-a880-a8a7d693dd94/_apis/Release/releases/218",
+                "_links": {}
+            },
+            "retentionPolicy": {
+                "daysToKeep": 30,
+                "releasesToKeep": 3,
+                "retainBuild": true
+            },
+            "processParameters": {},
+            "properties": {
+                "BoardsEnvironmentType": {
+                    "$type": "System.String",
+                    "$value": "unmapped"
+                },
+                "LinkBoardsWorkItems": {
+                    "$type": "System.String",
+                    "$value": "False"
+                }
+            },
+            "preDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "postDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "environmentTriggers": [],
+            "badgeUrl": "https://vsrm.dev.azure.com/lbmcetg/_apis/public/Release/badge/2bd01083-10bf-4b79-a880-a8a7d693dd94/4/5"
+        },
+        {
+            "id": 8,
+            "name": "Prod",
+            "rank": 2,
+            "owner": {
+                "displayName": "Kayla Ellis",
+                "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+                "_links": {
+                    "avatar": {
+                        "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+                    }
+                },
+                "id": "ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+                "uniqueName": "Kayla.Ellis@lbmc.com",
+                "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4",
+                "descriptor": "aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+            },
+            "variables": {},
+            "variableGroups": [],
+            "preDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": false,
+                        "isNotificationOn": false,
+                        "approver": {
+                            "displayName": "Kayla Ellis",
+                            "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+                            "_links": {
+                                "avatar": {
+                                    "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+                                }
+                            },
+                            "id": "ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+                            "uniqueName": "Kayla.Ellis@lbmc.com",
+                            "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4",
+                            "descriptor": "aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+                        },
+                        "id": 23
+                    },
+                    {
+                        "rank": 1,
+                        "isAutomated": false,
+                        "isNotificationOn": false,
+                        "approver": {
+                            "displayName": "Andrea Rodriguez",
+                            "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/38b2d80a-18cc-6a9e-b079-59ba15b39ea6",
+                            "_links": {
+                                "avatar": {
+                                    "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MzhiMmQ4MGEtMThjYy03YTllLWIwNzktNTliYTE1YjM5ZWE2"
+                                }
+                            },
+                            "id": "38b2d80a-18cc-6a9e-b079-59ba15b39ea6",
+                            "uniqueName": "Andrea.Rodriguez@lbmc.com",
+                            "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MzhiMmQ4MGEtMThjYy03YTllLWIwNzktNTliYTE1YjM5ZWE2",
+                            "descriptor": "aad.MzhiMmQ4MGEtMThjYy03YTllLWIwNzktNTliYTE1YjM5ZWE2"
+                        },
+                        "id": 24
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": 1,
+                    "releaseCreatorCanBeApprover": true,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 1
+                }
+            },
+            "deployStep": {
+                "id": 25
+            },
+            "postDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 26
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 2
+                }
+            },
+            "deployPhases": [
+                {
+                    "deploymentInput": {
+                        "parallelExecution": {
+                            "parallelExecutionType": 0
+                        },
+                        "agentSpecification": {
+                            "identifier": "ubuntu-latest"
+                        },
+                        "skipArtifactsDownload": false,
+                        "artifactsDownloadInput": {
+                            "downloadInputs": []
+                        },
+                        "queueId": 27,
+                        "demands": [],
+                        "enableAccessToken": false,
+                        "timeoutInMinutes": 0,
+                        "jobCancelTimeoutInMinutes": 1,
+                        "condition": "succeeded()",
+                        "overrideInputs": {}
+                    },
+                    "rank": 1,
+                    "phaseType": 1,
+                    "name": "Ubuntu job",
+                    "refName": null,
+                    "workflowTasks": [
+                        {
+                            "environment": {},
+                            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                            "version": "2.*",
+                            "name": "Deploy Infrastructure",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "connectedServiceNameARM": "aa7228c2-52a1-410c-ba2e-4ae258de416c",
+                                "scriptType": "bash",
+                                "scriptLocation": "inlineScript",
+                                "scriptPath": "",
+                                "inlineScript": "az deployment group create \\\n--resource-group RG-prd-integrator-core \\\n--template-file ./iac/main.bicep \\\n--parameters ./iac/prod.parameters.json",
+                                "scriptArguments": "",
+                                "powerShellErrorActionPreference": "stop",
+                                "addSpnToEnvironment": "false",
+                                "useGlobalConfig": "false",
+                                "cwd": "$(System.DefaultWorkingDirectory)/_Build_Core_IAC/core_iac_build_artifacts",
+                                "failOnStandardError": "false",
+                                "powerShellIgnoreLASTEXITCODE": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "501dd25d-1785-43e4-b4e5-a5c78ccc0573",
+                            "version": "2.*",
+                            "name": "Deploy Azure Function Endpoints",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "azureSubscription": "aa7228c2-52a1-410c-ba2e-4ae258de416c",
+                                "appType": "functionAppLinux",
+                                "appName": "prod-ipp-core",
+                                "deployToSlotOrASE": "false",
+                                "resourceGroupName": "",
+                                "slotName": "production",
+                                "package": "$(System.DefaultWorkingDirectory)/_Build_Core_AzFunc/**/*.zip",
+                                "runtimeStack": "PYTHON|3.8",
+                                "appSettings": "",
+                                "deploymentMethod": "auto"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "environmentOptions": {
+                "emailNotificationType": "OnlyOnFailure",
+                "emailRecipients": "release.environment.owner;release.creator",
+                "skipArtifactsDownload": false,
+                "timeoutInMinutes": 0,
+                "enableAccessToken": false,
+                "publishDeploymentStatus": true,
+                "badgeEnabled": false,
+                "autoLinkWorkItems": false,
+                "pullRequestDeploymentEnabled": false
+            },
+            "demands": [],
+            "conditions": [
+                {
+                    "name": "Test",
+                    "conditionType": 2,
+                    "value": "4"
+                }
+            ],
+            "executionPolicy": {
+                "concurrencyCount": 1,
+                "queueDepthCount": 1
+            },
+            "schedules": [],
+            "currentRelease": {
+                "id": 218,
+                "url": "https://vsrm.dev.azure.com/lbmcetg/2bd01083-10bf-4b79-a880-a8a7d693dd94/_apis/Release/releases/218",
+                "_links": {}
+            },
+            "retentionPolicy": {
+                "daysToKeep": 30,
+                "releasesToKeep": 3,
+                "retainBuild": true
+            },
+            "processParameters": {},
+            "properties": {
+                "BoardsEnvironmentType": {
+                    "$type": "System.String",
+                    "$value": "testing"
+                },
+                "LinkBoardsWorkItems": {
+                    "$type": "System.String",
+                    "$value": "False"
+                }
+            },
+            "preDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "postDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "environmentTriggers": [],
+            "badgeUrl": "https://vsrm.dev.azure.com/lbmcetg/_apis/public/Release/badge/2bd01083-10bf-4b79-a880-a8a7d693dd94/4/8"
+        }
+    ],
+    "artifacts": [
+        {
+            "sourceId": "2bd01083-10bf-4b79-a880-a8a7d693dd94:19",
+            "type": "Build",
+            "alias": "_Build_Core_AzFunc",
+            "definitionReference": {
+                "artifactSourceDefinitionUrl": {
+                    "id": "https://dev.azure.com/lbmcetg/_permalink/_build/index?collectionId=37cd0845-6ad7-40dd-bbc8-62fdad2ee1a2&projectId=2bd01083-10bf-4b79-a880-a8a7d693dd94&definitionId=19",
+                    "name": ""
+                },
+                "defaultVersionBranch": {
+                    "id": "main",
+                    "name": "main"
+                },
+                "defaultVersionSpecific": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionTags": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionType": {
+                    "id": "latestWithBranchAndTagsType",
+                    "name": "Latest from a specific branch with tags"
+                },
+                "definition": {
+                    "id": "19",
+                    "name": "Build Core Az Func"
+                },
+                "definitions": {
+                    "id": "",
+                    "name": ""
+                },
+                "IsMultiDefinitionType": {
+                    "id": "False",
+                    "name": "False"
+                },
+                "project": {
+                    "id": "2bd01083-10bf-4b79-a880-a8a7d693dd94",
+                    "name": "LBMC Data Services"
+                },
+                "repository": {
+                    "id": "",
+                    "name": ""
+                }
+            },
+            "isRetained": false
+        },
+        {
+            "sourceId": "2bd01083-10bf-4b79-a880-a8a7d693dd94:16",
+            "type": "Build",
+            "alias": "_Build_Core_IAC",
+            "definitionReference": {
+                "artifactSourceDefinitionUrl": {
+                    "id": "https://dev.azure.com/lbmcetg/_permalink/_build/index?collectionId=37cd0845-6ad7-40dd-bbc8-62fdad2ee1a2&projectId=2bd01083-10bf-4b79-a880-a8a7d693dd94&definitionId=16",
+                    "name": ""
+                },
+                "defaultVersionBranch": {
+                    "id": "main",
+                    "name": "main"
+                },
+                "defaultVersionSpecific": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionTags": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionType": {
+                    "id": "latestWithBranchAndTagsType",
+                    "name": "Latest from a specific branch with tags"
+                },
+                "definition": {
+                    "id": "16",
+                    "name": "Build Core IAC"
+                },
+                "definitions": {
+                    "id": "",
+                    "name": ""
+                },
+                "IsMultiDefinitionType": {
+                    "id": "False",
+                    "name": "False"
+                },
+                "project": {
+                    "id": "2bd01083-10bf-4b79-a880-a8a7d693dd94",
+                    "name": "LBMC Data Services"
+                },
+                "repository": {
+                    "id": "",
+                    "name": ""
+                }
+            },
+            "isPrimary": true,
+            "isRetained": false
+        }
+    ],
+    "triggers": [
+        {
+            "artifactAlias": "_Build_Core_AzFunc",
+            "triggerConditions": [
+                {
+                    "sourceBranch": "main",
+                    "tags": [],
+                    "tagFilter": null,
+                    "useBuildDefinitionBranch": false,
+                    "createReleaseOnBuildTagging": false
+                }
+            ],
+            "triggerType": 1
+        },
+        {
+            "artifactAlias": "_Build_Core_IAC",
+            "triggerConditions": [
+                {
+                    "sourceBranch": "main",
+                    "tags": [],
+                    "tagFilter": null,
+                    "useBuildDefinitionBranch": false,
+                    "createReleaseOnBuildTagging": false
+                }
+            ],
+            "triggerType": 1
+        }
+    ],
+    "releaseNameFormat": "Release-$(rev:r)",
+    "tags": [],
+    "properties": {
+        "DefinitionCreationSource": {
+            "$type": "System.String",
+            "$value": "ReleaseNew"
+        },
+        "IntegrateBoardsWorkItems": {
+            "$type": "System.String",
+            "$value": "False"
+        },
+        "IntegrateJiraWorkItems": {
+            "$type": "System.String",
+            "$value": "false"
+        }
+    },
+    "id": 4,
+    "name": "Integrator++ Core Deployment",
+    "path": "\\IntegratorPlusPlus Release Pipelines",
+    "projectReference": null,
+    "url": "https://vsrm.dev.azure.com/lbmcetg/2bd01083-10bf-4b79-a880-a8a7d693dd94/_apis/Release/definitions/4",
+    "_links": {
+        "self": {
+            "href": "https://vsrm.dev.azure.com/lbmcetg/2bd01083-10bf-4b79-a880-a8a7d693dd94/_apis/Release/definitions/4"
+        },
+        "web": {
+            "href": "https://dev.azure.com/lbmcetg/2bd01083-10bf-4b79-a880-a8a7d693dd94/_release?definitionId=4"
+        }
+    }
+}
