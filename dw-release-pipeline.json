@@ -1,0 +1,1617 @@
+{
+    "source": 2,
+    "revision": 12,
+    "description": "The releases pipeline deploys to the test and production resource groups for the data services team's Azure analytics solution",
+    "createdBy": {
+        "displayName": "Luke McConnell",
+        "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/2dcf252c-eddc-66de-8261-8917c3c2c33a",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+            }
+        },
+        "id": "2dcf252c-eddc-66de-8261-8917c3c2c33a",
+        "uniqueName": "luke.mcconnell@lbmc.com",
+        "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh",
+        "descriptor": "aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+    },
+    "createdOn": "2022-12-31T17:01:58.557Z",
+    "modifiedBy": {
+        "displayName": "Kayla Ellis",
+        "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+            }
+        },
+        "id": "ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+        "uniqueName": "Kayla.Ellis@lbmc.com",
+        "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4",
+        "descriptor": "aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+    },
+    "modifiedOn": "2023-04-13T13:57:37.780Z",
+    "isDeleted": false,
+    "lastRelease": {
+        "id": 234,
+        "name": "Release-199",
+        "artifacts": [],
+        "_links": {},
+        "description": "Triggered by Build ADF Artifacts 🐱‍💻 20230414.2.",
+        "releaseDefinition": {
+            "id": 2,
+            "projectReference": null,
+            "_links": {}
+        },
+        "createdOn": "2023-04-14T12:37:06.080Z",
+        "createdBy": {
+            "displayName": "Luke McConnell",
+            "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/2dcf252c-eddc-66de-8261-8917c3c2c33a",
+            "_links": {
+                "avatar": {
+                    "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+                }
+            },
+            "id": "2dcf252c-eddc-66de-8261-8917c3c2c33a",
+            "uniqueName": "luke.mcconnell@lbmc.com",
+            "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh",
+            "descriptor": "aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+        }
+    },
+    "variables": {
+        "azure-sub-id": {
+            "value": "412b4819-7472-4089-9de2-fed075a65ae6"
+        }
+    },
+    "variableGroups": [],
+    "environments": [
+        {
+            "id": 2,
+            "name": "Deploy to Test",
+            "rank": 1,
+            "owner": {
+                "displayName": "Luke McConnell",
+                "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/2dcf252c-eddc-66de-8261-8917c3c2c33a",
+                "_links": {
+                    "avatar": {
+                        "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+                    }
+                },
+                "id": "2dcf252c-eddc-66de-8261-8917c3c2c33a",
+                "uniqueName": "luke.mcconnell@lbmc.com",
+                "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh",
+                "descriptor": "aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+            },
+            "variables": {},
+            "variableGroups": [],
+            "preDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 6
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 1
+                }
+            },
+            "deployStep": {
+                "id": 7
+            },
+            "postDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 10
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 2
+                }
+            },
+            "deployPhases": [
+                {
+                    "deploymentInput": {
+                        "parallelExecution": {
+                            "parallelExecutionType": 0
+                        },
+                        "agentSpecification": {
+                            "identifier": "ubuntu-latest"
+                        },
+                        "skipArtifactsDownload": false,
+                        "artifactsDownloadInput": {
+                            "downloadInputs": [
+                                {
+                                    "alias": "_Build_ADF_Artifacts",
+                                    "artifactType": "Build",
+                                    "artifactDownloadMode": "All",
+                                    "artifactItems": []
+                                },
+                                {
+                                    "alias": "_Build_Bicep_IAC",
+                                    "artifactType": "Build",
+                                    "artifactDownloadMode": "All",
+                                    "artifactItems": []
+                                },
+                                {
+                                    "alias": "_Build_Python_Modules",
+                                    "artifactType": "Build",
+                                    "artifactDownloadMode": "All",
+                                    "artifactItems": []
+                                },
+                                {
+                                    "alias": "_Build_SQL_Databases",
+                                    "artifactType": "Build",
+                                    "artifactDownloadMode": "All",
+                                    "artifactItems": []
+                                }
+                            ]
+                        },
+                        "queueId": 27,
+                        "demands": [],
+                        "enableAccessToken": false,
+                        "timeoutInMinutes": 0,
+                        "jobCancelTimeoutInMinutes": 1,
+                        "condition": "succeeded()",
+                        "overrideInputs": {}
+                    },
+                    "rank": 1,
+                    "phaseType": 1,
+                    "name": "Ubuntu Agent job",
+                    "refName": null,
+                    "workflowTasks": [
+                        {
+                            "environment": {},
+                            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                            "version": "2.*",
+                            "name": "Deploy Azure Resources",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "connectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "scriptType": "bash",
+                                "scriptLocation": "inlineScript",
+                                "scriptPath": "",
+                                "inlineScript": "az deployment group create \\\n--resource-group rg-lbmc-diexp-test-dw \\\n--template-file ./iac/main.bicep \\\n--parameters ./iac/parameters_test.json",
+                                "scriptArguments": "",
+                                "powerShellErrorActionPreference": "stop",
+                                "addSpnToEnvironment": "false",
+                                "useGlobalConfig": "false",
+                                "cwd": "$(System.DefaultWorkingDirectory)/_Build_Bicep_IAC/build_artifacts",
+                                "failOnStandardError": "false",
+                                "powerShellIgnoreLASTEXITCODE": "false"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "deploymentInput": {
+                        "parallelExecution": {
+                            "parallelExecutionType": 0
+                        },
+                        "agentSpecification": {
+                            "identifier": "windows-latest"
+                        },
+                        "skipArtifactsDownload": false,
+                        "artifactsDownloadInput": {
+                            "downloadInputs": []
+                        },
+                        "queueId": 27,
+                        "demands": [],
+                        "enableAccessToken": false,
+                        "timeoutInMinutes": 0,
+                        "jobCancelTimeoutInMinutes": 1,
+                        "condition": "succeeded()",
+                        "overrideInputs": {}
+                    },
+                    "rank": 2,
+                    "phaseType": 1,
+                    "name": "Windows Agent job",
+                    "refName": null,
+                    "workflowTasks": [
+                        {
+                            "environment": {},
+                            "taskId": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+                            "version": "5.*",
+                            "name": "Pause Data Factory Triggers",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "ScriptType": "FilePath",
+                                "ScriptPath": "$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/PrePostDeploymentScript.ps1",
+                                "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+                                "ScriptArguments": "-armTemplate \"$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/ARMTemplateForFactory.json\" -ResourceGroupName rg-lbmc-diexp-test-dw -DataFactoryName test-lbmc-adf -predeployment $true -deleteDeployment $false",
+                                "errorActionPreference": "stop",
+                                "FailOnStandardError": "false",
+                                "TargetAzurePs": "LatestVersion",
+                                "CustomTargetAzurePs": "",
+                                "pwsh": "true",
+                                "validateScriptSignature": "false",
+                                "workingDirectory": ""
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+                            "version": "5.*",
+                            "name": "Deploy Data Factory Global Parameters",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "ScriptType": "FilePath",
+                                "ScriptPath": "$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFGlobalParameters/publish_global_params.ps1",
+                                "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+                                "ScriptArguments": "-globalParametersFilePath \"_Build_ADF_Artifacts/ADFGlobalParameters/test-lbmc-adf_GlobalParameters.json\" -resourceGroupName \"rg-lbmc-diexp-test-dw\" -dataFactoryName \"test-lbmc-adf\"",
+                                "errorActionPreference": "stop",
+                                "FailOnStandardError": "false",
+                                "TargetAzurePs": "LatestVersion",
+                                "CustomTargetAzurePs": "",
+                                "pwsh": "true",
+                                "validateScriptSignature": "false",
+                                "workingDirectory": ""
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "94a74903-f93f-4075-884f-dc11f34058b4",
+                            "version": "3.*",
+                            "name": "Deploy Data Factory Artifacts",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "deploymentScope": "Resource Group",
+                                "ConnectedServiceName": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "subscriptionName": "412b4819-7472-4089-9de2-fed075a65ae6",
+                                "action": "Create Or Update Resource Group",
+                                "resourceGroupName": "rg-lbmc-diexp-test-dw",
+                                "location": "North Central US",
+                                "templateLocation": "Linked artifact",
+                                "csmFileLink": "",
+                                "csmParametersFileLink": "",
+                                "csmFile": "$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/ARMTemplateForFactory.json",
+                                "csmParametersFile": "$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/ARMTemplateParametersForFactory.json",
+                                "overrideParameters": "-factoryName test-lbmc-adf",
+                                "deploymentMode": "Incremental",
+                                "deploymentName": "",
+                                "deploymentOutputs": "",
+                                "addSpnToEnvironment": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+                            "version": "5.*",
+                            "name": "Resume Data Factory Triggers",
+                            "refName": "",
+                            "enabled": false,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "ScriptType": "FilePath",
+                                "ScriptPath": "$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/PrePostDeploymentScript.ps1",
+                                "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+                                "ScriptArguments": "-armTemplate \"$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/ARMTemplateForFactory.json\" -ResourceGroupName rg-lbmc-diexp-test-dw -DataFactoryName test-lbmc-adf -predeployment $false -deleteDeployment $true",
+                                "errorActionPreference": "stop",
+                                "FailOnStandardError": "false",
+                                "TargetAzurePs": "LatestVersion",
+                                "CustomTargetAzurePs": "",
+                                "pwsh": "true",
+                                "validateScriptSignature": "false",
+                                "workingDirectory": ""
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                            "version": "2.*",
+                            "name": "Whitelist DevOps IP for Key Vault",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "connectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "scriptType": "bash",
+                                "scriptLocation": "inlineScript",
+                                "scriptPath": "",
+                                "inlineScript": "thisIp=$(curl ipinfo.io/ip)\n\necho ${thisIp}\n\naz keyvault network-rule add \\\n--name kv-lbmc-diexp-dw \\\n--ip-address ${thisIp} \\\n--resource-group rg-lbmc-diexp-ancilliary-dw",
+                                "scriptArguments": "",
+                                "powerShellErrorActionPreference": "stop",
+                                "addSpnToEnvironment": "false",
+                                "useGlobalConfig": "false",
+                                "cwd": "",
+                                "failOnStandardError": "false",
+                                "powerShellIgnoreLASTEXITCODE": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "1e244d32-2dd4-4165-96fb-b7441ca9331e",
+                            "version": "2.*",
+                            "name": "Get Database Password from Key Vault",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceName": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "KeyVaultName": "kv-lbmc-diexp-dw",
+                                "SecretsFilter": "test-lbmc-dw-sql-server-admin-password",
+                                "RunAsPreJob": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+                            "version": "1.*",
+                            "name": "Deploy DW SQL Database",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+                                "ConnectedServiceName": "",
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "AuthenticationType": "server",
+                                "ServerName": "test-lbmc-dw.database.windows.net",
+                                "DatabaseName": "DW",
+                                "SqlUsername": "lbmc-sql-admin",
+                                "SqlPassword": "$(test-lbmc-dw-sql-server-admin-password)",
+                                "aadSqlUsername": "",
+                                "aadSqlPassword": "",
+                                "ConnectionString": "\"$(test-lbmc-dw-sql-server-admin-conn-string)\"",
+                                "TaskNameSelector": "DacpacTask",
+                                "DeploymentAction": "Publish",
+                                "DacpacFile": "$(System.DefaultWorkingDirectory)/_Build_SQL_Databases/dacpacs/db/analytics/DW/bin/Release/DW.dacpac",
+                                "BacpacFile": "",
+                                "SqlFile": "",
+                                "SqlInline": "",
+                                "PublishProfile": "",
+                                "AdditionalArguments": "/p:BlockOnPossibleDataLoss=false",
+                                "SqlAdditionalArguments": "",
+                                "InlineAdditionalArguments": "",
+                                "IpDetectionMethod": "AutoDetect",
+                                "StartIpAddress": "",
+                                "EndIpAddress": "",
+                                "DeleteFirewallRule": "true"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+                            "version": "1.*",
+                            "name": "Deploy Audit SQL Database",
+                            "refName": "",
+                            "enabled": false,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+                                "ConnectedServiceName": "",
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "AuthenticationType": "server",
+                                "ServerName": "test-lbmc-dw.database.windows.net",
+                                "DatabaseName": "Audit",
+                                "SqlUsername": "lbmc-sql-admin",
+                                "SqlPassword": "$(test-lbmc-dw-sql-server-admin-password)",
+                                "aadSqlUsername": "",
+                                "aadSqlPassword": "",
+                                "ConnectionString": "\"$(test-lbmc-dw-sql-server-admin-conn-string)\"",
+                                "TaskNameSelector": "DacpacTask",
+                                "DeploymentAction": "Publish",
+                                "DacpacFile": "$(System.DefaultWorkingDirectory)/_Build_SQL_Databases/dacpacs/db/analytics/Audit/bin/Release/Audit.dacpac",
+                                "BacpacFile": "",
+                                "SqlFile": "",
+                                "SqlInline": "",
+                                "PublishProfile": "",
+                                "AdditionalArguments": "/v:db_server_name=test-lbmc-dw.database.windows.net",
+                                "SqlAdditionalArguments": "",
+                                "InlineAdditionalArguments": "",
+                                "IpDetectionMethod": "AutoDetect",
+                                "StartIpAddress": "",
+                                "EndIpAddress": "",
+                                "DeleteFirewallRule": "true"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+                            "version": "1.*",
+                            "name": "Deploy Advisory SQL Database",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+                                "ConnectedServiceName": "",
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "AuthenticationType": "server",
+                                "ServerName": "test-lbmc-dw.database.windows.net",
+                                "DatabaseName": "Advisory",
+                                "SqlUsername": "lbmc-sql-admin",
+                                "SqlPassword": "$(test-lbmc-dw-sql-server-admin-password)",
+                                "aadSqlUsername": "",
+                                "aadSqlPassword": "",
+                                "ConnectionString": "\"$(test-lbmc-dw-sql-server-admin-conn-string)\"",
+                                "TaskNameSelector": "DacpacTask",
+                                "DeploymentAction": "Publish",
+                                "DacpacFile": "$(System.DefaultWorkingDirectory)/_Build_SQL_Databases/dacpacs/db/analytics/Advisory/bin/Release/Advisory.dacpac",
+                                "BacpacFile": "",
+                                "SqlFile": "",
+                                "SqlInline": "",
+                                "PublishProfile": "",
+                                "AdditionalArguments": "",
+                                "SqlAdditionalArguments": "",
+                                "InlineAdditionalArguments": "",
+                                "IpDetectionMethod": "AutoDetect",
+                                "StartIpAddress": "",
+                                "EndIpAddress": "",
+                                "DeleteFirewallRule": "true"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+                            "version": "1.*",
+                            "name": "Deploy W2 SQL Database",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+                                "ConnectedServiceName": "",
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "AuthenticationType": "server",
+                                "ServerName": "test-lbmc-dw.database.windows.net",
+                                "DatabaseName": "W2",
+                                "SqlUsername": "lbmc-sql-admin",
+                                "SqlPassword": "$(test-lbmc-dw-sql-server-admin-password)",
+                                "aadSqlUsername": "",
+                                "aadSqlPassword": "",
+                                "ConnectionString": "\"$(test-lbmc-dw-sql-server-admin-conn-string)\"",
+                                "TaskNameSelector": "DacpacTask",
+                                "DeploymentAction": "Publish",
+                                "DacpacFile": "$(System.DefaultWorkingDirectory)/_Build_SQL_Databases/dacpacs/db/analytics/W2/bin/Release/W2.dacpac",
+                                "BacpacFile": "",
+                                "SqlFile": "",
+                                "SqlInline": "",
+                                "PublishProfile": "",
+                                "AdditionalArguments": "/v:db_server_name=test-lbmc-dw.database.windows.net",
+                                "SqlAdditionalArguments": "",
+                                "InlineAdditionalArguments": "",
+                                "IpDetectionMethod": "AutoDetect",
+                                "StartIpAddress": "",
+                                "EndIpAddress": "",
+                                "DeleteFirewallRule": "true"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                            "version": "2.*",
+                            "name": "Delete Key Vault Firewall Rule",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "connectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "scriptType": "bash",
+                                "scriptLocation": "inlineScript",
+                                "scriptPath": "",
+                                "inlineScript": "thisIp=$(curl ipinfo.io/ip)\n\necho ${thisIp}\n\naz keyvault network-rule remove \\\n--name kv-lbmc-diexp-dw \\\n--ip-address ${thisIp} \\\n--resource-group rg-lbmc-diexp-ancilliary-dw",
+                                "scriptArguments": "",
+                                "powerShellErrorActionPreference": "stop",
+                                "addSpnToEnvironment": "false",
+                                "useGlobalConfig": "false",
+                                "cwd": "",
+                                "failOnStandardError": "false",
+                                "powerShellIgnoreLASTEXITCODE": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                            "version": "2.*",
+                            "name": "Configure Function App",
+                            "refName": "",
+                            "enabled": false,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "connectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "scriptType": "bash",
+                                "scriptLocation": "inlineScript",
+                                "scriptPath": "",
+                                "inlineScript": "az functionapp config appsettings set --name test-data-integration-app-python \\\n     --resource-group rg-lbmc-diexp-test-dw \\\n     --settings \"AZURE_SUBSCRIPTION_ID=$(azure-sub-id)\" \"FUNCTIONS_EXTENSION_VERSION=~3\" \"FUNCTIONS_WORKER_RUNTIME=python\"",
+                                "scriptArguments": "",
+                                "powerShellErrorActionPreference": "stop",
+                                "addSpnToEnvironment": "false",
+                                "useGlobalConfig": "false",
+                                "cwd": "",
+                                "failOnStandardError": "false",
+                                "powerShellIgnoreLASTEXITCODE": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "501dd25d-1785-43e4-b4e5-a5c78ccc0573",
+                            "version": "1.*",
+                            "name": "Deploy Azure Function App",
+                            "refName": "",
+                            "enabled": false,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "azureSubscription": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "appType": "functionAppLinux",
+                                "appName": "prod-data-integration-app-python",
+                                "deployToSlotOrASE": "false",
+                                "resourceGroupName": "",
+                                "slotName": "production",
+                                "package": "$(System.DefaultWorkingDirectory)/**/*.zip",
+                                "runtimeStack": "",
+                                "startUpCommand": "",
+                                "customWebConfig": "",
+                                "appSettings": "",
+                                "configurationStrings": "",
+                                "deploymentMethod": "auto"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "environmentOptions": {
+                "emailNotificationType": "OnlyOnFailure",
+                "emailRecipients": "release.environment.owner;release.creator",
+                "skipArtifactsDownload": false,
+                "timeoutInMinutes": 0,
+                "enableAccessToken": false,
+                "publishDeploymentStatus": true,
+                "badgeEnabled": true,
+                "autoLinkWorkItems": true,
+                "pullRequestDeploymentEnabled": false
+            },
+            "demands": [],
+            "conditions": [
+                {
+                    "name": "ReleaseStarted",
+                    "conditionType": 1,
+                    "value": ""
+                }
+            ],
+            "executionPolicy": {
+                "concurrencyCount": 1,
+                "queueDepthCount": 1
+            },
+            "schedules": [],
+            "currentRelease": {
+                "id": 234,
+                "url": "https://vsrm.dev.azure.com/lbmcetg/2bd01083-10bf-4b79-a880-a8a7d693dd94/_apis/Release/releases/234",
+                "_links": {}
+            },
+            "retentionPolicy": {
+                "daysToKeep": 30,
+                "releasesToKeep": 3,
+                "retainBuild": true
+            },
+            "processParameters": {},
+            "properties": {
+                "BoardsEnvironmentType": {
+                    "$type": "System.String",
+                    "$value": "testing"
+                },
+                "LinkBoardsWorkItems": {
+                    "$type": "System.String",
+                    "$value": "False"
+                }
+            },
+            "preDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "postDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "environmentTriggers": [],
+            "badgeUrl": "https://vsrm.dev.azure.com/lbmcetg/_apis/public/Release/badge/2bd01083-10bf-4b79-a880-a8a7d693dd94/2/2"
+        },
+        {
+            "id": 3,
+            "name": "Deploy to Prod",
+            "rank": 2,
+            "owner": {
+                "displayName": "Luke McConnell",
+                "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/2dcf252c-eddc-66de-8261-8917c3c2c33a",
+                "_links": {
+                    "avatar": {
+                        "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+                    }
+                },
+                "id": "2dcf252c-eddc-66de-8261-8917c3c2c33a",
+                "uniqueName": "luke.mcconnell@lbmc.com",
+                "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh",
+                "descriptor": "aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+            },
+            "variables": {},
+            "variableGroups": [],
+            "preDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": false,
+                        "isNotificationOn": false,
+                        "approver": {
+                            "displayName": "Kayla Ellis",
+                            "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+                            "_links": {
+                                "avatar": {
+                                    "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+                                }
+                            },
+                            "id": "ed13b0a9-ad4b-6797-b8cb-b883c8b74cd8",
+                            "uniqueName": "Kayla.Ellis@lbmc.com",
+                            "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4",
+                            "descriptor": "aad.ZWQxM2IwYTktYWQ0Yi03Nzk3LWI4Y2ItYjg4M2M4Yjc0Y2Q4"
+                        },
+                        "id": 4
+                    },
+                    {
+                        "rank": 1,
+                        "isAutomated": false,
+                        "isNotificationOn": false,
+                        "approver": {
+                            "displayName": "Luke McConnell",
+                            "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/2dcf252c-eddc-66de-8261-8917c3c2c33a",
+                            "_links": {
+                                "avatar": {
+                                    "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+                                }
+                            },
+                            "id": "2dcf252c-eddc-66de-8261-8917c3c2c33a",
+                            "uniqueName": "luke.mcconnell@lbmc.com",
+                            "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh",
+                            "descriptor": "aad.MmRjZjI1MmMtZWRkYy03NmRlLTgyNjEtODkxN2MzYzJjMzNh"
+                        },
+                        "id": 5
+                    },
+                    {
+                        "rank": 1,
+                        "isAutomated": false,
+                        "isNotificationOn": false,
+                        "approver": {
+                            "displayName": "Alex Kim",
+                            "url": "https://spsprodcus5.vssps.visualstudio.com/A3824ac0f-76cf-4cb0-8f4f-e5e583660215/_apis/Identities/368dfd40-791c-6a69-90a5-3975888fd1f7",
+                            "_links": {
+                                "avatar": {
+                                    "href": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MzY4ZGZkNDAtNzkxYy03YTY5LTkwYTUtMzk3NTg4OGZkMWY3"
+                                }
+                            },
+                            "id": "368dfd40-791c-6a69-90a5-3975888fd1f7",
+                            "uniqueName": "Alex.Kim@lbmc.com",
+                            "imageUrl": "https://dev.azure.com/lbmcetg/_apis/GraphProfile/MemberAvatars/aad.MzY4ZGZkNDAtNzkxYy03YTY5LTkwYTUtMzk3NTg4OGZkMWY3",
+                            "descriptor": "aad.MzY4ZGZkNDAtNzkxYy03YTY5LTkwYTUtMzk3NTg4OGZkMWY3"
+                        },
+                        "id": 32
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": 1,
+                    "releaseCreatorCanBeApprover": true,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 43200,
+                    "executionOrder": 1
+                }
+            },
+            "deployStep": {
+                "id": 8
+            },
+            "postDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 9
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 2
+                }
+            },
+            "deployPhases": [
+                {
+                    "deploymentInput": {
+                        "parallelExecution": {
+                            "parallelExecutionType": 0
+                        },
+                        "agentSpecification": {
+                            "identifier": "ubuntu-latest"
+                        },
+                        "skipArtifactsDownload": false,
+                        "artifactsDownloadInput": {
+                            "downloadInputs": []
+                        },
+                        "queueId": 27,
+                        "demands": [],
+                        "enableAccessToken": false,
+                        "timeoutInMinutes": 0,
+                        "jobCancelTimeoutInMinutes": 1,
+                        "condition": "succeeded()",
+                        "overrideInputs": {}
+                    },
+                    "rank": 1,
+                    "phaseType": 1,
+                    "name": "Ubuntu Agent job",
+                    "refName": null,
+                    "workflowTasks": [
+                        {
+                            "environment": {},
+                            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                            "version": "2.*",
+                            "name": "Deploy Azure Resources",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "connectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "scriptType": "bash",
+                                "scriptLocation": "inlineScript",
+                                "scriptPath": "",
+                                "inlineScript": "az deployment group create \\\n--resource-group rg-lbmc-diexp-prod-dw \\\n--template-file ./iac/main.bicep \\\n--parameters ./iac/parameters_prod.json",
+                                "scriptArguments": "",
+                                "powerShellErrorActionPreference": "stop",
+                                "addSpnToEnvironment": "false",
+                                "useGlobalConfig": "false",
+                                "cwd": "$(System.DefaultWorkingDirectory)/_Build_Bicep_IAC/build_artifacts",
+                                "failOnStandardError": "false",
+                                "powerShellIgnoreLASTEXITCODE": "false"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "deploymentInput": {
+                        "parallelExecution": {
+                            "parallelExecutionType": 0
+                        },
+                        "agentSpecification": {
+                            "identifier": "windows-latest"
+                        },
+                        "skipArtifactsDownload": false,
+                        "artifactsDownloadInput": {
+                            "downloadInputs": []
+                        },
+                        "queueId": 27,
+                        "demands": [],
+                        "enableAccessToken": false,
+                        "timeoutInMinutes": 0,
+                        "jobCancelTimeoutInMinutes": 1,
+                        "condition": "succeeded()",
+                        "overrideInputs": {}
+                    },
+                    "rank": 2,
+                    "phaseType": 1,
+                    "name": "Windows Agent job",
+                    "refName": null,
+                    "workflowTasks": [
+                        {
+                            "environment": {},
+                            "taskId": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+                            "version": "5.*",
+                            "name": "Pause Data Factory Triggers",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "ScriptType": "FilePath",
+                                "ScriptPath": "$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/PrePostDeploymentScript.ps1",
+                                "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+                                "ScriptArguments": "-armTemplate \"$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/ARMTemplateForFactory.json\" -ResourceGroupName rg-lbmc-diexp-prod-dw -DataFactoryName prod-lbmc-adf -predeployment $true -deleteDeployment $false",
+                                "errorActionPreference": "stop",
+                                "FailOnStandardError": "false",
+                                "TargetAzurePs": "LatestVersion",
+                                "CustomTargetAzurePs": "",
+                                "pwsh": "true",
+                                "validateScriptSignature": "false",
+                                "workingDirectory": ""
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+                            "version": "5.*",
+                            "name": "Deploy Data Factory Global Parameters",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "ScriptType": "FilePath",
+                                "ScriptPath": "$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFGlobalParameters/publish_global_params.ps1",
+                                "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+                                "ScriptArguments": "-globalParametersFilePath \"_Build_ADF_Artifacts/ADFGlobalParameters/prod-lbmc-adf_GlobalParameters.json\" -resourceGroupName \"rg-lbmc-diexp-prod-dw\" -dataFactoryName \"prod-lbmc-adf\"",
+                                "errorActionPreference": "stop",
+                                "FailOnStandardError": "false",
+                                "TargetAzurePs": "LatestVersion",
+                                "CustomTargetAzurePs": "",
+                                "pwsh": "true",
+                                "validateScriptSignature": "false",
+                                "workingDirectory": ""
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "94a74903-f93f-4075-884f-dc11f34058b4",
+                            "version": "3.*",
+                            "name": "Deploy Data Factory Artifacts",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "deploymentScope": "Resource Group",
+                                "ConnectedServiceName": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "subscriptionName": "412b4819-7472-4089-9de2-fed075a65ae6",
+                                "action": "Create Or Update Resource Group",
+                                "resourceGroupName": "rg-lbmc-diexp-prod-dw",
+                                "location": "North Central US",
+                                "templateLocation": "Linked artifact",
+                                "csmFileLink": "",
+                                "csmParametersFileLink": "",
+                                "csmFile": "$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/ARMTemplateForFactory.json",
+                                "csmParametersFile": "$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/ARMTemplateParametersForFactory.json",
+                                "overrideParameters": "-factoryName prod-lbmc-adf",
+                                "deploymentMode": "Incremental",
+                                "deploymentName": "",
+                                "deploymentOutputs": "",
+                                "addSpnToEnvironment": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "72a1931b-effb-4d2e-8fd8-f8472a07cb62",
+                            "version": "5.*",
+                            "name": "Resume Data Factory Triggers",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "ScriptType": "FilePath",
+                                "ScriptPath": "$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/PrePostDeploymentScript.ps1",
+                                "Inline": "# You can write your azure powershell scripts inline here. \n# You can also pass predefined and custom variables to this script using arguments",
+                                "ScriptArguments": "-armTemplate \"$(System.DefaultWorkingDirectory)/_Build_ADF_Artifacts/ADFArmTemplates/ARMTemplateForFactory.json\" -ResourceGroupName rg-lbmc-diexp-prod-dw -DataFactoryName prod-lbmc-adf -predeployment $false -deleteDeployment $true",
+                                "errorActionPreference": "stop",
+                                "FailOnStandardError": "false",
+                                "TargetAzurePs": "LatestVersion",
+                                "CustomTargetAzurePs": "",
+                                "pwsh": "true",
+                                "validateScriptSignature": "false",
+                                "workingDirectory": ""
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                            "version": "2.*",
+                            "name": "Whitelist DevOps IP for Key Vault",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "connectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "scriptType": "bash",
+                                "scriptLocation": "inlineScript",
+                                "scriptPath": "",
+                                "inlineScript": "thisIp=$(curl ipinfo.io/ip)\n\necho ${thisIp}\n\naz keyvault network-rule add \\\n--name kv-lbmc-diexp-dw \\\n--ip-address ${thisIp} \\\n--resource-group rg-lbmc-diexp-ancilliary-dw",
+                                "scriptArguments": "",
+                                "powerShellErrorActionPreference": "stop",
+                                "addSpnToEnvironment": "false",
+                                "useGlobalConfig": "false",
+                                "cwd": "",
+                                "failOnStandardError": "false",
+                                "powerShellIgnoreLASTEXITCODE": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "1e244d32-2dd4-4165-96fb-b7441ca9331e",
+                            "version": "2.*",
+                            "name": "Get Database Password from Key Vault",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceName": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "KeyVaultName": "kv-lbmc-diexp-dw",
+                                "SecretsFilter": "prod-lbmc-dw-sql-server-admin-password",
+                                "RunAsPreJob": "false"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+                            "version": "1.*",
+                            "name": "Deploy DW Database",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+                                "ConnectedServiceName": "",
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "AuthenticationType": "server",
+                                "ServerName": "prod-lbmc-dw.database.windows.net",
+                                "DatabaseName": "DW",
+                                "SqlUsername": "lbmc-sql-admin",
+                                "SqlPassword": "$(prod-lbmc-dw-sql-server-admin-password)",
+                                "aadSqlUsername": "",
+                                "aadSqlPassword": "",
+                                "ConnectionString": "",
+                                "TaskNameSelector": "DacpacTask",
+                                "DeploymentAction": "Publish",
+                                "DacpacFile": "$(System.DefaultWorkingDirectory)/_Build_SQL_Databases/dacpacs/db/analytics/DW/bin/Release/DW.dacpac",
+                                "BacpacFile": "",
+                                "SqlFile": "",
+                                "SqlInline": "",
+                                "PublishProfile": "",
+                                "AdditionalArguments": "/p:BlockOnPossibleDataLoss=false",
+                                "SqlAdditionalArguments": "",
+                                "InlineAdditionalArguments": "",
+                                "IpDetectionMethod": "AutoDetect",
+                                "StartIpAddress": "",
+                                "EndIpAddress": "",
+                                "DeleteFirewallRule": "true"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+                            "version": "1.*",
+                            "name": "Deploy Audit Database",
+                            "refName": "",
+                            "enabled": false,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+                                "ConnectedServiceName": "",
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "AuthenticationType": "server",
+                                "ServerName": "prod-lbmc-dw.database.windows.net",
+                                "DatabaseName": "Audit",
+                                "SqlUsername": "lbmc-sql-admin",
+                                "SqlPassword": "$(prod-lbmc-dw-sql-server-admin-password)",
+                                "aadSqlUsername": "",
+                                "aadSqlPassword": "",
+                                "ConnectionString": "",
+                                "TaskNameSelector": "DacpacTask",
+                                "DeploymentAction": "Publish",
+                                "DacpacFile": "$(System.DefaultWorkingDirectory)/_Build_SQL_Databases/dacpacs/db/analytics/Audit/bin/Release/Audit.dacpac",
+                                "BacpacFile": "",
+                                "SqlFile": "",
+                                "SqlInline": "",
+                                "PublishProfile": "",
+                                "AdditionalArguments": "/v:db_server_name=prod-lbmc-dw.database.windows.net",
+                                "SqlAdditionalArguments": "",
+                                "InlineAdditionalArguments": "",
+                                "IpDetectionMethod": "AutoDetect",
+                                "StartIpAddress": "",
+                                "EndIpAddress": "",
+                                "DeleteFirewallRule": "true"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+                            "version": "1.*",
+                            "name": "Deploy Advisory Database",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+                                "ConnectedServiceName": "",
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "AuthenticationType": "server",
+                                "ServerName": "prod-lbmc-dw.database.windows.net",
+                                "DatabaseName": "Advisory",
+                                "SqlUsername": "lbmc-sql-admin",
+                                "SqlPassword": "$(prod-lbmc-dw-sql-server-admin-password)",
+                                "aadSqlUsername": "",
+                                "aadSqlPassword": "",
+                                "ConnectionString": "",
+                                "TaskNameSelector": "DacpacTask",
+                                "DeploymentAction": "Publish",
+                                "DacpacFile": "$(System.DefaultWorkingDirectory)/_Build_SQL_Databases/dacpacs/db/analytics/Advisory/bin/Release/Advisory.dacpac",
+                                "BacpacFile": "",
+                                "SqlFile": "",
+                                "SqlInline": "",
+                                "PublishProfile": "",
+                                "AdditionalArguments": "",
+                                "SqlAdditionalArguments": "",
+                                "InlineAdditionalArguments": "",
+                                "IpDetectionMethod": "AutoDetect",
+                                "StartIpAddress": "",
+                                "EndIpAddress": "",
+                                "DeleteFirewallRule": "true"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "ce85a08b-a538-4d2b-8589-1d37a9ab970f",
+                            "version": "1.*",
+                            "name": "Deploy W2 Database",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceNameSelector": "ConnectedServiceNameARM",
+                                "ConnectedServiceName": "",
+                                "ConnectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "AuthenticationType": "server",
+                                "ServerName": "prod-lbmc-dw.database.windows.net",
+                                "DatabaseName": "W2",
+                                "SqlUsername": "lbmc-sql-admin",
+                                "SqlPassword": "$(prod-lbmc-dw-sql-server-admin-password)",
+                                "aadSqlUsername": "",
+                                "aadSqlPassword": "",
+                                "ConnectionString": "",
+                                "TaskNameSelector": "DacpacTask",
+                                "DeploymentAction": "Publish",
+                                "DacpacFile": "$(System.DefaultWorkingDirectory)/_Build_SQL_Databases/dacpacs/db/analytics/W2/bin/Release/W2.dacpac",
+                                "BacpacFile": "",
+                                "SqlFile": "",
+                                "SqlInline": "",
+                                "PublishProfile": "",
+                                "AdditionalArguments": "/v:db_server_name=prod-lbmc-dw.database.windows.net",
+                                "SqlAdditionalArguments": "",
+                                "InlineAdditionalArguments": "",
+                                "IpDetectionMethod": "AutoDetect",
+                                "StartIpAddress": "",
+                                "EndIpAddress": "",
+                                "DeleteFirewallRule": "true"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "46e4be58-730b-4389-8a2f-ea10b3e5e815",
+                            "version": "2.*",
+                            "name": "Delete Key Vault Firewall Rule",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "connectedServiceNameARM": "3ea2a98a-83eb-4692-8aba-c09e4cdf7fc4",
+                                "scriptType": "bash",
+                                "scriptLocation": "inlineScript",
+                                "scriptPath": "",
+                                "inlineScript": "thisIp=$(curl ipinfo.io/ip)\n\necho ${thisIp}\n\naz keyvault network-rule remove \\\n--name kv-lbmc-diexp-dw \\\n--ip-address ${thisIp} \\\n--resource-group rg-lbmc-diexp-ancilliary-dw",
+                                "scriptArguments": "",
+                                "powerShellErrorActionPreference": "stop",
+                                "addSpnToEnvironment": "false",
+                                "useGlobalConfig": "false",
+                                "cwd": "",
+                                "failOnStandardError": "false",
+                                "powerShellIgnoreLASTEXITCODE": "false"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "environmentOptions": {
+                "emailNotificationType": "OnlyOnFailure",
+                "emailRecipients": "release.environment.owner;release.creator",
+                "skipArtifactsDownload": false,
+                "timeoutInMinutes": 0,
+                "enableAccessToken": false,
+                "publishDeploymentStatus": true,
+                "badgeEnabled": true,
+                "autoLinkWorkItems": true,
+                "pullRequestDeploymentEnabled": false
+            },
+            "demands": [],
+            "conditions": [
+                {
+                    "name": "Deploy to Test",
+                    "conditionType": 2,
+                    "value": "4"
+                }
+            ],
+            "executionPolicy": {
+                "concurrencyCount": 1,
+                "queueDepthCount": 1
+            },
+            "schedules": [],
+            "currentRelease": {
+                "id": 233,
+                "url": "https://vsrm.dev.azure.com/lbmcetg/2bd01083-10bf-4b79-a880-a8a7d693dd94/_apis/Release/releases/233",
+                "_links": {}
+            },
+            "retentionPolicy": {
+                "daysToKeep": 30,
+                "releasesToKeep": 3,
+                "retainBuild": true
+            },
+            "processParameters": {},
+            "properties": {
+                "BoardsEnvironmentType": {
+                    "$type": "System.String",
+                    "$value": "production"
+                },
+                "LinkBoardsWorkItems": {
+                    "$type": "System.String",
+                    "$value": "False"
+                }
+            },
+            "preDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "postDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "environmentTriggers": [],
+            "badgeUrl": "https://vsrm.dev.azure.com/lbmcetg/_apis/public/Release/badge/2bd01083-10bf-4b79-a880-a8a7d693dd94/2/3"
+        }
+    ],
+    "artifacts": [
+        {
+            "sourceId": "2bd01083-10bf-4b79-a880-a8a7d693dd94:6",
+            "type": "Build",
+            "alias": "_Build_ADF_Artifacts",
+            "definitionReference": {
+                "artifactSourceDefinitionUrl": {
+                    "id": "https://dev.azure.com/lbmcetg/_permalink/_build/index?collectionId=37cd0845-6ad7-40dd-bbc8-62fdad2ee1a2&projectId=2bd01083-10bf-4b79-a880-a8a7d693dd94&definitionId=6",
+                    "name": ""
+                },
+                "defaultVersionBranch": {
+                    "id": "main",
+                    "name": "main"
+                },
+                "defaultVersionSpecific": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionTags": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionType": {
+                    "id": "latestWithBranchAndTagsType",
+                    "name": "Latest from a specific branch with tags"
+                },
+                "definition": {
+                    "id": "6",
+                    "name": "Build ADF Artifacts 🐱‍💻"
+                },
+                "definitions": {
+                    "id": "",
+                    "name": ""
+                },
+                "IsMultiDefinitionType": {
+                    "id": "False",
+                    "name": "False"
+                },
+                "project": {
+                    "id": "2bd01083-10bf-4b79-a880-a8a7d693dd94",
+                    "name": "LBMC Data Services"
+                },
+                "repository": {
+                    "id": "",
+                    "name": ""
+                }
+            },
+            "isRetained": false
+        },
+        {
+            "sourceId": "2bd01083-10bf-4b79-a880-a8a7d693dd94:2",
+            "type": "Build",
+            "alias": "_Build_Bicep_IAC",
+            "definitionReference": {
+                "artifactSourceDefinitionUrl": {
+                    "id": "https://dev.azure.com/lbmcetg/_permalink/_build/index?collectionId=37cd0845-6ad7-40dd-bbc8-62fdad2ee1a2&projectId=2bd01083-10bf-4b79-a880-a8a7d693dd94&definitionId=2",
+                    "name": ""
+                },
+                "defaultVersionBranch": {
+                    "id": "main",
+                    "name": "main"
+                },
+                "defaultVersionSpecific": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionTags": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionType": {
+                    "id": "latestWithBranchAndTagsType",
+                    "name": "Latest from a specific branch with tags"
+                },
+                "definition": {
+                    "id": "2",
+                    "name": "Build Bicep IAC 🐱‍🏍"
+                },
+                "definitions": {
+                    "id": "",
+                    "name": ""
+                },
+                "IsMultiDefinitionType": {
+                    "id": "False",
+                    "name": "False"
+                },
+                "project": {
+                    "id": "2bd01083-10bf-4b79-a880-a8a7d693dd94",
+                    "name": "LBMC Data Services"
+                },
+                "repository": {
+                    "id": "",
+                    "name": ""
+                }
+            },
+            "isPrimary": true,
+            "isRetained": false
+        },
+        {
+            "sourceId": "2bd01083-10bf-4b79-a880-a8a7d693dd94:3",
+            "type": "Build",
+            "alias": "_Build_Python_Modules",
+            "definitionReference": {
+                "artifactSourceDefinitionUrl": {
+                    "id": "https://dev.azure.com/lbmcetg/_permalink/_build/index?collectionId=37cd0845-6ad7-40dd-bbc8-62fdad2ee1a2&projectId=2bd01083-10bf-4b79-a880-a8a7d693dd94&definitionId=3",
+                    "name": ""
+                },
+                "defaultVersionBranch": {
+                    "id": "main",
+                    "name": "main"
+                },
+                "defaultVersionSpecific": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionTags": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionType": {
+                    "id": "latestWithBranchAndTagsType",
+                    "name": "Latest from a specific branch with tags"
+                },
+                "definition": {
+                    "id": "3",
+                    "name": "Build Python Modules 🐱‍👤"
+                },
+                "definitions": {
+                    "id": "",
+                    "name": ""
+                },
+                "IsMultiDefinitionType": {
+                    "id": "False",
+                    "name": "False"
+                },
+                "project": {
+                    "id": "2bd01083-10bf-4b79-a880-a8a7d693dd94",
+                    "name": "LBMC Data Services"
+                },
+                "repository": {
+                    "id": "",
+                    "name": ""
+                }
+            },
+            "isRetained": false
+        },
+        {
+            "sourceId": "2bd01083-10bf-4b79-a880-a8a7d693dd94:5",
+            "type": "Build",
+            "alias": "_Build_SQL_Databases",
+            "definitionReference": {
+                "artifactSourceDefinitionUrl": {
+                    "id": "https://dev.azure.com/lbmcetg/_permalink/_build/index?collectionId=37cd0845-6ad7-40dd-bbc8-62fdad2ee1a2&projectId=2bd01083-10bf-4b79-a880-a8a7d693dd94&definitionId=5",
+                    "name": ""
+                },
+                "defaultVersionBranch": {
+                    "id": "main",
+                    "name": "main"
+                },
+                "defaultVersionSpecific": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionTags": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionType": {
+                    "id": "latestWithBranchAndTagsType",
+                    "name": "Latest from a specific branch with tags"
+                },
+                "definition": {
+                    "id": "5",
+                    "name": "Build SQL Databases 🐱‍🐉"
+                },
+                "definitions": {
+                    "id": "",
+                    "name": ""
+                },
+                "IsMultiDefinitionType": {
+                    "id": "False",
+                    "name": "False"
+                },
+                "project": {
+                    "id": "2bd01083-10bf-4b79-a880-a8a7d693dd94",
+                    "name": "LBMC Data Services"
+                },
+                "repository": {
+                    "id": "",
+                    "name": ""
+                }
+            },
+            "isRetained": false
+        }
+    ],
+    "triggers": [
+        {
+            "artifactAlias": "_Build_ADF_Artifacts",
+            "triggerConditions": [
+                {
+                    "sourceBranch": "main",
+                    "tags": [],
+                    "tagFilter": null,
+                    "useBuildDefinitionBranch": false,
+                    "createReleaseOnBuildTagging": false
+                }
+            ],
+            "triggerType": 1
+        },
+        {
+            "artifactAlias": "_Build_Bicep_IAC",
+            "triggerConditions": [
+                {
+                    "sourceBranch": "main",
+                    "tags": [],
+                    "tagFilter": null,
+                    "useBuildDefinitionBranch": false,
+                    "createReleaseOnBuildTagging": false
+                }
+            ],
+            "triggerType": 1
+        },
+        {
+            "artifactAlias": "_Build_Python_Modules",
+            "triggerConditions": [
+                {
+                    "sourceBranch": "main",
+                    "tags": [],
+                    "tagFilter": null,
+                    "useBuildDefinitionBranch": false,
+                    "createReleaseOnBuildTagging": false
+                }
+            ],
+            "triggerType": 1
+        },
+        {
+            "artifactAlias": "_Build_SQL_Databases",
+            "triggerConditions": [
+                {
+                    "sourceBranch": "main",
+                    "tags": [],
+                    "tagFilter": null,
+                    "useBuildDefinitionBranch": false,
+                    "createReleaseOnBuildTagging": false
+                }
+            ],
+            "triggerType": 1
+        }
+    ],
+    "releaseNameFormat": "Release-$(rev:r)",
+    "tags": [],
+    "properties": {
+        "DefinitionCreationSource": {
+            "$type": "System.String",
+            "$value": "ReleaseImport"
+        },
+        "IntegrateBoardsWorkItems": {
+            "$type": "System.String",
+            "$value": "False"
+        },
+        "IntegrateJiraWorkItems": {
+            "$type": "System.String",
+            "$value": "false"
+        }
+    },
+    "id": 2,
+    "name": "LBMCDW Deployment Pipeline",
+    "path": "\\",
+    "projectReference": null,
+    "url": "https://vsrm.dev.azure.com/lbmcetg/2bd01083-10bf-4b79-a880-a8a7d693dd94/_apis/Release/definitions/2",
+    "_links": {
+        "self": {
+            "href": "https://vsrm.dev.azure.com/lbmcetg/2bd01083-10bf-4b79-a880-a8a7d693dd94/_apis/Release/definitions/2"
+        },
+        "web": {
+            "href": "https://dev.azure.com/lbmcetg/2bd01083-10bf-4b79-a880-a8a7d693dd94/_release?definitionId=2"
+        }
+    }
+}
